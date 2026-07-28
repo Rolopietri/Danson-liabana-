@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ─── Identidad — Danson Liabana ─────────────────────────────────────
+   Editorial de moda: tinta sobre hueso, hairlines finas y un único acento
+   dorado (el color del valor). Los colores con carga semántica se reservan
+   para la salud financiera: verde = entra / positivo, rojo = sale / negativo,
+   ámbar = ojo. */
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fraunces);
+
+  /* Tinta (texto) */
+  --color-ink: #1a1917;
+  --color-ink-soft: #57534e;
+  --color-ink-mute: #928d85;
+
+  /* Hueso y papel (fondos) */
+  --color-paper: #ffffff;
+  --color-bone: #f5f3ee;
+  --color-bone-soft: #fbfaf7;
+  --color-sand: #eae5db;
+
+  /* Hairlines */
+  --color-line: #e5e1d8;
+  --color-line-soft: #efece5;
+
+  /* Acento: dorado (uso mínimo — activo, foco, detalles de valor) */
+  --color-gold: #9a7b4f;
+  --color-gold-deep: #7e6540;
+
+  /* Semánticos de finanzas */
+  --color-pos: #1e7a5a;
+  --color-pos-bg: #e9f3ee;
+  --color-pos-line: #c2e0d1;
+  --color-neg: #b23a2f;
+  --color-neg-bg: #f7ebe9;
+  --color-neg-line: #e6c7c2;
+  --color-warn: #b7791f;
+  --color-warn-bg: #f8f1e3;
+  --color-warn-line: #e7d5b0;
+}
+
+html,
+body {
+  background: var(--color-bone-soft);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Wordmark / titulares */
+.font-display {
+  font-family: var(--font-fraunces), "Fraunces", Georgia, serif;
+}
+
+/* Cifras: figuras tabulares para que el dinero alinee en columnas */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Etiqueta pequeña espaciada (eyebrows editoriales) */
+.eyebrow {
+  font-family: var(--font-inter), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 10px;
+  font-weight: 500;
+}
